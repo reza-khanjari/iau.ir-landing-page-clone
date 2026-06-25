@@ -45,18 +45,18 @@ body {
 }
 
 .swiper-pagination-bullet {
-  background-color: #cfdef6 !important; /* خاکستری */
-  width: 16px !important; /* کشیده شدن */
+  background-color: #cfdef6 !important; 
+  width: 16px !important; 
   height: 16px !important;
   transition: all 0.3s ease;
   opacity: 0.5 !important;
 }
 
-/* استایل دات فعال (کشیده شدن دات فعال) */
+
 .swiper-pagination-bullet-active {
-  background-color: #eee !important; /* آبی */
+  background-color: #eee !important; 
   opacity: 1 !important;
-  width: 32px !important; /* کشیده شدن */
+  width: 32px !important; 
   border-radius: 24px !important;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
@@ -158,8 +158,8 @@ body {
   transform: translate(-50%, -50%);
 }
 ::-webkit-scrollbar {
-  width: 10px; /* عرض برای اسکرول‌بار عمودی */
-  height: 10px; /* ارتفاع برای اسکرول‌بار افقی */
+  width: 10px; 
+  height: 10px; 
 }
 ::-webkit-scrollbar-track {
   background: #0e264e;
@@ -167,8 +167,8 @@ body {
 }
 ::-webkit-scrollbar-thumb {
   background-color: #2564cb;
-  border-radius: 10px; /* گرد کردن لبه‌ها برای زیبایی بیشتر */
-  border: 1px solid #0e264e; /* ایجاد فاصله با ایجاد حاشیه هم‌رنگ با track */
+  border-radius: 10px; 
+  border: 1px solid #0e264e; 
 }
 
 ::-webkit-scrollbar-thumb:hover {
