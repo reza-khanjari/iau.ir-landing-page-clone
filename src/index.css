@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "Vazir";
+  src: url(/fonts/Vazir.woff);
+}
+@font-face {
+  font-family: "Vazir-Bold";
+  src: url(/fonts/Vazir-Bold.woff);
+}
+@font-face {
+  font-family: "Vazir-thin";
+  src: url(/fonts/Vazir-thin.woff);
+}
+
+@import "tailwindcss";
+@layer base {
+  html {
+    scrollbar-gutter: stable;
+  }
+}
+@theme {
+  --color-primary-50: #e9f0fb;
+  --color-primary-100: #cfdef6;
+  --color-primary-200: #a4c0ef;
+  --color-primary-300: #75a0e6;
+  --color-primary-400: #457fdd;
+  --color-primary-500: #2564cb;
+  --color-primary-600: #1c4c9b;
+  --color-primary-700: #153975;
+  --color-primary-800: #0e264e;
+  --color-primary-900: #071327;
+  --color-primary-950: #030811;
+  --color-black-800:#262626;
+  --font-vazir-bold: "Vazir-Bold";
+}
+body {
+  box-sizing: border-box;
+  background: white no-repeat;
+  background-color: #1c4c9b;
+  background-image: url(/images/bg.png);
+  background-size: cover;
+  background-attachment: fixed;
+  color: #212121;
+  font-family: "Vazir";
+  margin:0;
+}
+
+.swiper-pagination-bullet {
+  background-color: #cfdef6 !important; /* خاکستری */
+  width: 16px !important; /* کشیده شدن */
+  height: 16px !important;
+  transition: all 0.3s ease;
+  opacity: 0.5 !important;
+}
+
+/* استایل دات فعال (کشیده شدن دات فعال) */
+.swiper-pagination-bullet-active {
+  background-color: #eee !important; /* آبی */
+  opacity: 1 !important;
+  width: 32px !important; /* کشیده شدن */
+  border-radius: 24px !important;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+.swiper-pagination {
+  position: absolute !important;
+  bottom: 3.5rem !important;
+}
+.swiper-wrapper {
+  backface-visibility: hidden;
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility glow-inner-* {
+  /* ۱. استخراج رنگ ورودی تلویند یا رنگ دلخواه */
+  --glow-color: --value(--color-*);
+  --tw-glow-inner-opacity: 1;
+
+  /* ۲. تعریف لایه‌های درخشش (از پخش کم و غلیظ تا پخش زیاد و محو) */
+  box-shadow:
+    inset 0 0 4px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(80% * var(--tw-glow-inner-opacity)),
+        transparent
+      ),
+    inset 0 0 12px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(60% * var(--tw-glow-inner-opacity)),
+        transparent
+      ),
+    inset 0 0 20px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(40% * var(--tw-glow-inner-opacity)),
+        transparent
+      ),
+    inset 0 0 40px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(20% * var(--tw-glow-inner-opacity)),
+        transparent
+      );
+}
+@utility glow-* {
+  /* ۱. استخراج رنگ ورودی تلویند یا رنگ دلخواه */
+  --glow-color: --value(--color-*);
+  --tw-glow-opacity: 1;
+
+  /* ۲. تعریف لایه‌های درخشش (از پخش کم و غلیظ تا پخش زیاد و محو) */
+  box-shadow:
+    0 0 4px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(80% * var(--tw-glow-opacity)),
+        transparent
+      ),
+    0 0 12px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(60% * var(--tw-glow-opacity)),
+        transparent
+      ),
+    0 0 20px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(40% * var(--tw-glow-opacity)),
+        transparent
+      ),
+    0 0 40px
+      color-mix(
+        in srgb,
+        var(--glow-color) calc(20% * var(--tw-glow-opacity)),
+        transparent
+      );
+}
+
+@utility glow-opacity-* {
+  --tw-glow-opacity: calc(--value(integer) / 100);
+}
+@utility glow-inner-opacity-* {
+  --tw-glow-inner-opacity: calc(--value(integer) / 100);
+}
+@utility abs-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@utility fixed-center {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+::-webkit-scrollbar {
+  width: 10px; /* عرض برای اسکرول‌بار عمودی */
+  height: 10px; /* ارتفاع برای اسکرول‌بار افقی */
+}
+::-webkit-scrollbar-track {
+  background: #0e264e;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2564cb;
+  border-radius: 10px; /* گرد کردن لبه‌ها برای زیبایی بیشتر */
+  border: 1px solid #0e264e; /* ایجاد فاصله با ایجاد حاشیه هم‌رنگ با track */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1c4c9b;
+  cursor: grab;
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: #1c4c9b;
+
+  cursor: grabbing;
+}
+body {
+  transition: all 0.5s ease-in-out;
+}
+
+.scale {
+  animation: scale 0.3s ease-out 1 ;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
