@@ -30,9 +30,6 @@ A high-performance, modular, and fully responsive landing page for IAU, engineer
   <img src="./public/screenshots/Search.png" alt="Desktop Screenshot" width="800" style="max-width: 100%; margin: 10px 0;">
     <br>
     <br>
-  <img src="./public/screenshots/Search-empty.png" alt="Desktop Screenshot" width="800" style="max-width: 100%; margin: 10px 0;">
-    <br>
-    <br>
   <img src="./public/screenshots/Timeline.png" alt="Desktop Screenshot" width="800" style="max-width: 100%; margin: 10px 0;">
     <br>
     <br>
