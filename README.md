@@ -73,7 +73,7 @@ The codebase follows a scalable directory pattern:
 src/
 ├── components/      # Reusable UI Blocks (Search, Slider, Accordion, etc.)
 ├── hooks/           # Logic Abstractions (useScroll, useClickOutside, etc.)
-├── Layout/          # Larg Semantic Sections (Header, Footer, NewsSection)
+├── layout/          # Larg Semantic Sections (Header, Footer, NewsSection)
 ├── shared/          # Centralized Project Assets
 │   ├── types/       # Global TypeScript Interfaces & Definitions
 │   └── ui/          # Atomic UI elements (Button, Heading)
